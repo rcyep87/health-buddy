@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301202155) do
+ActiveRecord::Schema.define(version: 20160302173611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "steps", force: :cascade do |t|
+    t.integer "count"
+    t.date    "date",    default: '2016-03-02'
+    t.integer "user_id"
+  end
+
+  add_index "steps", ["user_id"], name: "index_steps_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,4 +42,5 @@ ActiveRecord::Schema.define(version: 20160301202155) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "steps", "users"
 end
