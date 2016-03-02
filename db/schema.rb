@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302175807) do
+ActiveRecord::Schema.define(version: 20160302181203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "sleeps_tables", force: :cascade do |t|
+  create_table "sleeps", force: :cascade do |t|
     t.datetime "start_time", null: false
     t.datetime "end_time",   null: false
     t.date     "date",       null: false
     t.integer  "user_id"
   end
 
-  add_index "sleeps_tables", ["user_id"], name: "index_sleeps_tables_on_user_id", using: :btree
+  add_index "sleeps", ["user_id"], name: "index_sleeps_on_user_id", using: :btree
 
   create_table "steps", force: :cascade do |t|
     t.integer "count"
@@ -51,6 +51,6 @@ ActiveRecord::Schema.define(version: 20160302175807) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "sleeps_tables", "users"
+  add_foreign_key "sleeps", "users"
   add_foreign_key "steps", "users"
 end
