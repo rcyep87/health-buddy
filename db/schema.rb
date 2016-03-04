@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160304043938) do
 
   create_table "steps", force: :cascade do |t|
     t.integer  "count"
-    t.date     "date",       default: '2016-03-02'
+    t.date     "date",       default: '2016-03-04'
     t.integer  "user_id",                           null: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
