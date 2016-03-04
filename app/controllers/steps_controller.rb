@@ -10,6 +10,8 @@ class StepsController < ApplicationController
 
   def create
     @step = Step.new(step_params)
+    @step.save
+    redirect_to steps_path
   end
 
   private
