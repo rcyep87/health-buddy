@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'steps' => 'steps#index'
   get 'steps/new' => 'steps#new'
   post 'steps' => 'steps#create'
+  delete 'steps/:id' => 'steps#delete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

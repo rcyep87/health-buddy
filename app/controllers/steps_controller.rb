@@ -10,8 +10,17 @@ class StepsController < ApplicationController
 
   def create
     @step = Step.new(step_params)
-    @step.save
-    redirect_to steps_path
+    if @step.save
+      redirect_to steps_path
+    else
+      render "new"
+    end
+  end
+
+  def destroy
+    @step = Step.find()
+    @step.destroy
+    render text: "Successfully deleted step count!", status: 200
   end
 
   private
