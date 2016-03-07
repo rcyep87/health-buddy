@@ -1,15 +1,3 @@
-<%= form_for @step do |f| %>
-  <div class="field">
-    <%= f.label :steps_count %>
-    <%= f.text_field :count %>
-  </div>
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.date_field :date %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
-  <%= f.submit %>
-<% end %>
+<div class="row">
+  <%= render "form" %>
+</div>

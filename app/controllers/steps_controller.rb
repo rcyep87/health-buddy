@@ -4,6 +4,9 @@ class StepsController < ApplicationController
     @steps = Step.all
   end
 
+  def show
+  end
+
   def new
     @step = Step.new
   end
