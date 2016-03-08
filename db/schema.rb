@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304043938) do
+ActiveRecord::Schema.define(version: 20160308201056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "sleeps", force: :cascade do |t|
-    t.datetime "start_time", null: false
-    t.datetime "end_time",   null: false
-    t.date     "date",       null: false
-    t.integer  "user_id"
+    t.time    "start_time", null: false
+    t.time    "end_time",   null: false
+    t.date    "date",       null: false
+    t.integer "user_id"
   end
 
   add_index "sleeps", ["user_id"], name: "index_sleeps_on_user_id", using: :btree
 
   create_table "steps", force: :cascade do |t|
     t.integer  "count"
-    t.date     "date",       default: '2016-03-04'
+    t.date     "date",       default: '2016-03-02'
     t.integer  "user_id",                           null: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
