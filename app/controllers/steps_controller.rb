@@ -22,9 +22,9 @@ before_action :set_step, only: [:show, :destroy]
   end
 
   def destroy
-    @step = Step.find(params[:id])
-    @step.destroy
-    render text: "Successfully deleted step count!", status: 200
+    if @step.destroy
+      render text: "Successfully deleted step count!", status: 200
+    end
   end
 
   private
