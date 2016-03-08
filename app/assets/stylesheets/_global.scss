@@ -1,8 +1,13 @@
 /* Global Styles */
 
 html {
+    color: $color-text;
     font: {
         family: $font-text;
         weight: 300;
     }
+}
+
+body {
+    background-color: #2196f3;
 }
