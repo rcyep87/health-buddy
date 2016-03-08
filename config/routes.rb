@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'steps' => 'steps#index'
-  get 'steps' => 'steps#show',    as: "step"
-  get 'steps/new' => 'steps#new', as: "new_step"
+  get 'steps/:id' => 'steps#show', as: "step"
+  get 'steps/new' => 'steps#new' , as: "new_step"
   post 'steps' => 'steps#create'
   delete 'steps/:id' => 'steps#destroy'
   # The priority is based upon order of creation: first created -> highest priority.

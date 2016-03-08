@@ -1,5 +1,5 @@
 <% @steps.each do |step| %>
-  <%= step.date %>
-  <%= step.count %>
-  <%= step.user_id %>
+  <%= link_to step.date   , step_path(step) %>
+  <%= link_to step.count  , step_path(step) %>
+  <%= link_to step.user_id, step_path(step) %>
 <% end %>

@@ -5,6 +5,7 @@ class StepsController < ApplicationController
   end
 
   def show
+    set_step
   end
 
   def new
@@ -21,7 +22,7 @@ class StepsController < ApplicationController
   end
 
   def destroy
-    @step = Step.find()
+    @step = Step.find(params[:id])
     @step.destroy
     render text: "Successfully deleted step count!", status: 200
   end
