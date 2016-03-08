@@ -2,15 +2,15 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'steps' => 'steps#index'
-  get 'steps/:id' => 'steps#show', as: "step"
   get 'steps/new' => 'steps#new' , as: "new_step"
   post 'steps' => 'steps#create'
+  get 'steps/:id' => 'steps#show', as: "step"
   delete 'steps/:id' => 'steps#destroy'
 
-  get 'sleeps'         => 'sleeps#index',  as: "sleeps"
-  get 'sleeps/:id'     => 'sleeps#show' ,  as: "sleep"
-  get 'sleeps/new'     => 'sleeps#new'  ,  as: "new_sleep"
-  post 'sleeps'        => 'sleeps#new'
+  get  'sleeps'         => 'sleeps#index',  as: "sleeps"
+  get  'sleeps/new'     => 'sleeps#new'  ,  as: "new_sleep"
+  post 'sleeps'        => 'sleeps#create'
+  get  'sleeps/:id'     => 'sleeps#show' ,  as: "sleep"
   delete 'sleeps/:id'  => 'sleeps#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
