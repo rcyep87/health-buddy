@@ -2,6 +2,9 @@
 
 label {
     color: $color-text;
+    font: {
+        @include fntz(1);
+    }
 }
 
 input[type=text],
@@ -16,9 +19,4 @@ input[type=number],
 input[type=search],
 textarea.materialize-textarea {
     border-bottom: 1px solid $color-text;
-
-    &:focus {
-        border-bottom: 2px solid $color-text;
-    }
-
 }
