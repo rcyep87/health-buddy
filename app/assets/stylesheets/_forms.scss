@@ -7,21 +7,23 @@ label {
     }
 }
 
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=url],
-input[type=time],
-input[type=date],
-input[type=datetime-local],
-input[type=tel],
-input[type=number],
-input[type=search],
-textarea.materialize-textarea {
-    border-bottom: 1px solid $color-text;
+.field {
+
+    input {
+        border-bottom: 1px solid $color-text;
+        font: {
+            @include fntz(1.5);
+        }
+
+        &:focus:not([readonly]) {
+            border-bottom: 2px solid $color-text;
+        }
+
+    }
+
 }
 
-input {
+.actions input {
     background-color: transparent;
     border: 2px solid $color-text;
     border-radius: 0.15rem;
