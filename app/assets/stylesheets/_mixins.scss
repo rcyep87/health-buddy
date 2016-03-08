@@ -1,0 +1,22 @@
+/* Mixins */
+
+$tot-width: 100%;
+$tot-num-col: 12;
+$gut-width: 2%;
+$col-width: ($tot-width - (($tot-num-col - 1)*$gut-width))/$tot-num-col;
+
+@mixin grid($col-num) {
+	float: left;
+	width: ($col-width*$col-num)+(($col-num - 1)*$gut-width);
+	margin-right: $gut-width;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+}
+
+@mixin fntz($rem){
+	size: (($rem*16) + px);
+	size: ($rem + rem);
+}
