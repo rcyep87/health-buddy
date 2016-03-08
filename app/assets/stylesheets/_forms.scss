@@ -20,3 +20,17 @@ input[type=search],
 textarea.materialize-textarea {
     border-bottom: 1px solid $color-text;
 }
+
+input {
+    background-color: transparent;
+    border: 2px solid $color-text;
+    border-radius: 0.15rem;
+    color: $color-text;
+    font: {
+        @include fntz(1.25);
+        weight: 400;
+    }
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+}
