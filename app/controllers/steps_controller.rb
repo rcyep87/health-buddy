@@ -1,11 +1,11 @@
 class StepsController < ApplicationController
+before_action :set_step, only: [:show, :destroy]
 
   def index
     @steps = Step.all
   end
 
   def show
-    set_step
   end
 
   def new
