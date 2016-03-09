@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Secure API keys
+gem 'figaro'
 # Devise fo authentiation
 gem 'devise'
 # Materialize sass
