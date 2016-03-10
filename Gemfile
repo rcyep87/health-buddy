@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Forecast IO gem
+gem 'forecast_io'
+# typhoeus gem
+gem 'typhoeus'
 # Secure API keys
 gem 'figaro'
 # Devise fo authentiation
