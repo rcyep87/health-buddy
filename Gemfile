@@ -9,6 +9,8 @@ gem 'pg'
 gem 'forecast_io'
 # typhoeus gem
 gem 'typhoeus'
+# geocode gem
+gem 'geocoder'
 # Secure API keys
 gem 'figaro'
 # Devise fo authentiation
