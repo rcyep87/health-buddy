@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :steps
   has_many :sleeps
+  has_one :weather
 end
