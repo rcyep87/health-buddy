@@ -11,4 +11,7 @@ class User < ActiveRecord::Base
   def full_address
     "#{User.first.weather.address1}, #{User.first.weather.city}, #{User.first.weather.state} #{User.first.weather.zipcode}"
   end
+
+  geocoded_by :full_address
+  after_validation :geocode, :if => :address_changed?
 end
