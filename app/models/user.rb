@@ -6,10 +6,10 @@ class User < ActiveRecord::Base
 
   has_many :steps
   has_many :sleeps
-  has_one :weather
+  has_one :location
 
   def full_address
-    "#{User.first.weather.address1}, #{User.first.weather.city}, #{User.first.weather.state} #{User.first.weather.zipcode}"
+    "#{User.first.location.address1}, #{User.first.location.city}, #{User.first.location.state} #{User.first.location.zipcode}"
   end
 
   geocoded_by :full_address
