@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   post 'sleeps'        => 'sleeps#create'
   get  'sleeps/:id'     => 'sleeps#show' ,  as: "sleep"
   delete 'sleeps/:id'  => 'sleeps#destroy'
+
+  get    'locations'     => 'locations#index'  , as: "locations"
+  get    'locations/new' => 'locations#new'    , as: "new_location"
+  post   'locations'     => 'locations#create'
+  get    'locations/:id' => 'locations#show'   , as: "location"
+  delete 'locations/:id' => 'locations#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
