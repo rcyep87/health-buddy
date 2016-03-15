@@ -16,7 +16,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     if @location.save
-      redirect_to locations_path
+      redirect_to location_path
     else
       render "new"
     end
@@ -25,6 +25,7 @@ class LocationsController < ApplicationController
   def destroy
     if @location.destroy
       render text: "Successfully deleted a location!", status: 200
+    end
   end
 
   private
