@@ -3,7 +3,6 @@ class SleepsController < ApplicationController
 
   def index
     @sleeps = Sleep.all
-    @user = User.first
   end
 
   def show
