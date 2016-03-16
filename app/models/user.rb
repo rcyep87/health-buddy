@@ -9,11 +9,15 @@ class User < ActiveRecord::Base
   has_many :locations
 
   def most_recent_lat #displays most recent latitude for a user's location
-    self.first.locations.last.latitude
+    self.locations.last.latitude
   end
 
   def most_recent_long #displays most recent longitude for a user's location
-    self.first.locations.last.longitude
+    self.locations.last.longitude
+  end
+
+  def forecast
+    ForecastIO.forecast(most_recent_lat, most_recent_long)
   end
 
 end
