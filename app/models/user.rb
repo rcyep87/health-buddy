@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :steps
   has_many :sleeps
-  has_many :location
+  has_many :locations
 
 
 end
