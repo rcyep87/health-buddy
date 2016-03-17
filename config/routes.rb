@@ -19,9 +19,8 @@ Rails.application.routes.draw do
   get    'locations/:id' => 'locations#show'   , as: "location"
   delete 'locations/:id' => 'locations#destroy'
 
-  get    'weathers'      => "weathers#index"   , as: "weathers"
-  
-  get    'weathers/:id'  => 'weathers#show'    , as: "weather"
+  get    'current_forecast'      => "weathers#index"   , as: "forecast"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

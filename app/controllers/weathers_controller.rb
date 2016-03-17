@@ -1,10 +1,7 @@
 class WeathersController < ApplicationController
 
   def index
-    @user = User.first
+    @user_forecast = current_user.forecast
   end
 
-  def show
-
-  end
 end
