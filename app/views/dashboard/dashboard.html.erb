@@ -1,1 +1,20 @@
 <h1><%= "#{@user}'s Dashboard" %></h1>
+
+
+<h2>Features So Far: </h2>
+
+<p>
+  <h3><%= link_to "Record the amount of steps you've taken today", new_step_path %></h3>
+</p>
+
+<p>
+  <h3><%= link_to "Record the amount of hours of sleep you've had today", new_sleep_path %></h3>
+</p>
+
+<p>
+  <h3><%= link_to "Provide a location you want weather updates for", new_location_path %></h3>
+</p>
+
+<p>
+  <h3><%= link_to "After you've provided a location, click here to find out the forecast and temperature for today", forecast_path %></h3>
+</p>
