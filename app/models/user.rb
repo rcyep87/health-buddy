@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   end
 
   def forecast
-    ForecastIO.forecast(most_recent_lat, most_recent_long)
+    ForecastIO.forecast(most_recent_lat, most_recent_long).to_hash
   end
 
 end
