@@ -9,8 +9,6 @@ gem 'forecast_io'
 gem 'geocoder'
 # Secure API keys
 gem 'figaro'
-# Use postgresql as the database for Active Record
-gem 'pg'
 # Devise fo authentiation
 gem 'devise'
 # Materialize sass
