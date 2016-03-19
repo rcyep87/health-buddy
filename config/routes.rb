@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     root to: "devise/sessions#new"
   end
 
+  get "dashboard" => 'dashboard#dashboard', as: "user_dashboard"
+
   get 'steps' => 'steps#index'
   get 'steps/new' => 'steps#new' , as: "new_step"
   post 'steps' => 'steps#create'
