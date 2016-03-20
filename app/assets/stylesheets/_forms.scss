@@ -24,10 +24,10 @@ label {
 }
 
 .actions input {
-    background-color: transparent;
-    border: 2px solid $color-text;
+    background-color: $color-text;
+    border: none;
     border-radius: 0.15rem;
-    color: $color-text;
+    color: $color-box-text;
     font: {
         @include fntz(1.25);
         weight: 400;
