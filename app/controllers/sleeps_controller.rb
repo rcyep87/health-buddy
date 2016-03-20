@@ -14,6 +14,8 @@ class SleepsController < ApplicationController
 
   def create
     @sleep = Sleep.new(sleep_params)
+    @sleep.set_user!(current_user)
+    
     if @sleep.save
       redirect_to sleeps_path
     else

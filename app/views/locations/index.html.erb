@@ -1,0 +1,17 @@
+<h1>Your Record Locations:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address: </th>
+    </tr>
+  </thead>
+
+  <% @locations.each do |location| %>
+  <tbody>
+    <tr>
+      <td><%= "#{location.address1} #{location.city}, #{location.state} #{location.zipcode}" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

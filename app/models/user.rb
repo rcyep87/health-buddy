@@ -6,4 +6,18 @@ class User < ActiveRecord::Base
 
   has_many :steps
   has_many :sleeps
+  has_many :locations
+
+  def most_recent_lat #displays most recent latitude for a user's location
+    self.locations.last.latitude
+  end
+
+  def most_recent_long #displays most recent longitude for a user's location
+    self.locations.last.longitude
+  end
+
+  def forecast
+    ForecastIO.forecast(most_recent_lat, most_recent_long).to_hash
+  end
+
 end

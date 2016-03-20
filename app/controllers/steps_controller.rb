@@ -10,10 +10,13 @@ before_action :set_step, only: [:show, :destroy]
 
   def new
     @step = Step.new
+    @step.user = current_user
   end
 
   def create
     @step = Step.new(step_params)
+    @step.set_user!(current_user)
+    
     if @step.save
       redirect_to steps_path
     else

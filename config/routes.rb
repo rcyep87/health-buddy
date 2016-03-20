@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
+
+  get "dashboard" => 'dashboard#dashboard', as: "user_dashboard"
+
   get 'steps' => 'steps#index'
   get 'steps/new' => 'steps#new' , as: "new_step"
   post 'steps' => 'steps#create'
@@ -12,6 +18,15 @@ Rails.application.routes.draw do
   post 'sleeps'        => 'sleeps#create'
   get  'sleeps/:id'     => 'sleeps#show' ,  as: "sleep"
   delete 'sleeps/:id'  => 'sleeps#destroy'
+
+  get    'locations'     => 'locations#index'  , as: "locations"
+  get    'locations/new' => 'locations#new'    , as: "new_location"
+  post   'locations'     => 'locations#create'
+  get    'locations/:id' => 'locations#show'   , as: "location"
+  delete 'locations/:id' => 'locations#destroy'
+
+  get    'current_forecast'      => "weathers#index"   , as: "forecast"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

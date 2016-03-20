@@ -1,0 +1,17 @@
+<h1>Current Weather Summary</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Summary: </th>
+      <th>Current Temperature: </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @user_forecast["hourly"]["summary"] %></td>
+      <td><%= @user_forecast["hourly"]["data"][0]["temperature"] %></td>
+    </tr>
+  </tbody>
+</table>

@@ -3,8 +3,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-# Use postgresql as the database for Active Record
-gem 'pg'
+# forecast_io gem
+gem 'forecast_io'
+# Geocoder gem
+gem 'geocoder'
+# Secure API keys
+gem 'figaro'
 # Devise fo authentiation
 gem 'devise'
 # Materialize sass
@@ -47,4 +51,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'pg'
+  gem 'puma'
+  gem 'rails_12factor'
 end
