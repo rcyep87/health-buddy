@@ -2,7 +2,14 @@
 
 h1 {
     font: {
+        @include fntz(4);
         weight: 900;
     }
     text-transform: uppercase;
+}
+
+h2 {
+    font: {
+        @include fntz(2.5);
+    }
 }

@@ -4,12 +4,16 @@ html {
     color: $color-text;
     font: {
         family: $font-text;
+        size: 100%;
         weight: 300;
     }
 }
 
 body {
     background-color: $color-day;
+    font: {
+        @include fntz(1.25);
+    }
 }
 
 .container {
