@@ -11,3 +11,5 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 forecast_IO_API: "690578ae5aa49cd52349f2cb5da793e1"
+fitbit_secret:   "f126484bfbca84f9713d16bee4b7bbf1"
+fibit_key:       "c3a58ccd6a9b4e83c9d5b91ed594a80c"
