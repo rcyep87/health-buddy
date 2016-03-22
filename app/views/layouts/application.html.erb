@@ -35,8 +35,9 @@
   <% if user_signed_in? %>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a href="#" class="logo-short">H<span>B</span></a>
+        <a href="#" class="logo">Health<span>Buddy</span></a>
+        <ul id="nav-mobile" class="nav-menu">
           <li><%= link_to "Dashboard"      , user_dashboard_path %></li>
           <li><%= link_to "Logout"         , destroy_user_session_path, method: :DELETE %></li>
         </ul>

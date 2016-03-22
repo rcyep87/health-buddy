@@ -7,6 +7,15 @@ label {
     }
 }
 
+[type="checkbox"] + label:before {
+    border: 2px solid $color-text;
+}
+
+[type="checkbox"]:checked + label:before {
+    border-right: 2px solid $color-text;
+    border-bottom: 2px solid $color-text;
+}
+
 .field {
 
     input {

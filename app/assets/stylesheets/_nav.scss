@@ -1,0 +1,34 @@
+/* Nav Styles */
+
+nav {
+    background: none;
+    border-bottom: 1px solid $color-text;
+    box-shadow: none;
+
+    .logo {
+        display: none;
+    }
+
+    .logo,
+    .logo-short {
+        float: left;
+        font: {
+            @include fntz(2);
+            weight: 900;
+        }
+        margin-left: 5%;
+
+        span {
+            font: {
+                weight: 400;
+            }
+        }
+
+    }
+
+    .nav-menu {
+        float: right;
+        margin-right: 3%;
+    }
+
+}
