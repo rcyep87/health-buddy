@@ -25,3 +25,9 @@ $primary-color: color("blue", "lighten-2") !default;
         "nav",
         "forms",
         "media-queries";
+
+
+body.morning { background-color: $color-morning }
+body.day     { background-color: $color-day; }
+body.evening { background-color: $color-evening; }
+body.night   { background-color: $color-night; }
