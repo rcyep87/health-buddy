@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :sleeps
   has_many :locations
 
+  validates :email, uniqueness: true
+
   def most_recent_lat #displays most recent latitude for a user's location
     self.locations.last.latitude
   end

@@ -16,7 +16,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     @location.set_user!(current_user)
-    
+
     if @location.save
       redirect_to @location
     else
