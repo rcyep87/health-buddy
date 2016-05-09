@@ -1,4 +1,4 @@
-<%= form_for @step do |f| %>
+<%= form_for(@step, remote: true) do |f| %>
   <div class="field">
     <%= f.label :steps_count %>
     <%= f.text_field :count %>
@@ -7,7 +7,5 @@
     <%= f.label :date %>
     <%= f.date_field :date %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <button id="form-submit">Submit</button>
 <% end %>
